@@ -42,6 +42,27 @@ def extraire_donnees_ressources(data):
     
     return ressources_extraites
 
+# Charger l'image du villageois
+villager_img = pygame.image.load("assets2D/villagers/villager.png").convert_alpha()
+
+# Redimensionner l'image du villageois pour qu'elle couvre 3x3 cases (3x CELL_SIZE)
+villager_scaled = pygame.transform.scale(villager_img, (3 * plateau.CELL_SIZE, 3 * plateau.CELL_SIZE))
+
+# Charger les villageois depuis le fichier JSON
+villagers_data = load_villagers_data('Datas/VillageoisData')
+villagers = get_villagers_from_data(villagers_data)
+
+
+# Fonction pour dessiner tous les villageois
+def draw_ressource():
+    """Fonction pour dessiner les villageois sur le plateau."""
+    for ressource in ressources:
+        # Calculer la position en pixels à partir des coordonnées en cases
+        position_x, position_y = villager['position']
+        # Dessiner le villageois à sa position
+        plateau.screen.blit(villager_scaled, (position_x * plateau.CELL_SIZE, position_y * plateau.CELL_SIZE))
+
+
 # Test de chargement et d'extraction
 if __name__ == "__main__":
     data = charger_ressources()

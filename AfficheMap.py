@@ -27,20 +27,19 @@ carte = [
 JSON_PATH="villageois.json"
 
 
-def charger_plateau():
+def charger_villageois():
     """Charge les données du plateau depuis le fichier JSON."""
     try:
         with open(JSON_PATH, "r", encoding="utf-8") as file:
-            data = json.load(file)
-            return data  # Retourne la liste des cases
+            data_villageois = json.load(file)
+            return data_villageois  # Retourne la liste des cases
     except FileNotFoundError:
         print(f"Erreur : Fichier {JSON_PATH} non trouvé.")
         return []
     except json.JSONDecodeError:
         print("Erreur : Le fichier JSON est mal formaté.")
         return []
-    
-villageois = json.loads("villageois.json")
+villageois = charger_villageois()
 
 # Initialisation de Pygame
 pygame.init()

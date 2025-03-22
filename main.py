@@ -1,4 +1,4 @@
-'''
+
 # main.py
 import pygame
 import plateau
@@ -54,7 +54,7 @@ def main():
             case = case[0]  # Prendre la première case de la liste
 
         if case:
-            print(f"\n📍 Case trouvée aux coordonnées ({x}, {y}) :")
+            print(f"\n Case trouvée aux coordonnées ({x}, {y}) :")
             print(f"  - Biome : {case['biome']['nom']} ({case['biome']['description']})")
             print(f"  - Accessible : {'Oui' if case['accessible'] else 'Non'}")
             
@@ -69,8 +69,8 @@ def main():
             print(f"Aucune case trouvée aux coordonnées ({x}, {y}).")
 
     except ValueError:
-        print("❌ Erreur : Veuillez entrer des coordonnées valides (nombres entiers).")
+        print("Erreur : Veuillez entrer des coordonnées valides (nombres entiers).")
 
 if __name__ == "__main__":
     main()
-
+'''
