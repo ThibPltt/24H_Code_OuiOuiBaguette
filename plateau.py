@@ -36,23 +36,3 @@ def draw_bosquet():
         for y in range(0, HEIGHT, TILE_SIZE):
             screen.blit(bosquet_scaled, (x, y))
 
-def main():
-    running = True
-    while running:
-        screen.fill(GREEN)  # Fond vert
-
-        # Dessiner la grille et les images
-        draw_grid()
-        draw_bosquet()
-
-        # Gestion des événements
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-
-        pygame.display.flip()  # Rafraîchir l'affichage
-
-    pygame.quit()
-
-if __name__ == "__main__":
-    main()
