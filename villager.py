@@ -1,99 +1,54 @@
-# villager.py
+import requests
 import pygame
 import plateau  # Importation du fichier plateau.py
-import json
 
-# Charger les données JSON depuis le fichier
-def load_villagers_data(filepath):
-    """Charge les données des villageois à partir du fichier JSON."""
-    with open(filepath, 'r') as file:
-        data = json.load(file)
-    return data
+# API Info
+idEquipe = "8503fb81-528b-4b2d-8b1f-783bcc8bf6db"
+base_url = f"http://51.210.117.22:8080/equipes/{idEquipe}/villageois"
 
-def get_villagers_from_data(data):
-    """Retourne la liste des villageois avec leurs informations."""
-    villagers = []
-    for villager_data in data:
-        villagers.append({
-            'id': villager_data['idVillageois'],
-            'name': villager_data['nom'],
-            'position': (villager_data['positionX'], villager_data['positionY'])
-        })
-    return villagers
+headers = {
+    "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2VG5aX1o4WlM2YTlYczJqckl4RTZLS0lNbjgyaTdxN3Z4cTRtY3dQOE13In0.eyJleHAiOjE3NDI4MjUxNjUsImlhdCI6MTc0MjY1MjM2NSwianRpIjoiM2JhM2I3MjMtNWRkNy00NmJiLTkyOWItNzcyZWVmYWY3YmJjIiwiaXNzIjoiaHR0cDovLzUxLjIxMC4xMTcuMjI6ODA4MS9yZWFsbXMvY29kZWxlbWFucyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI5ODU4OGRlNC0yOTNhLTRlMDYtODZhMS1kMTA2NTI3YTliZjYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ3b2xvbG8tYmFja2VuZCIsInNlc3Npb25fc3RhdGUiOiI2NmI2OWI3OS1iMWNkLTRiMDgtODI5Yy1iNjc3MGYyYjNhMGUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY29kZWxlbWFucyIsInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjY2YjY5Yjc5LWIxY2QtNGIwOC04MjljLWI2NzcwZjJiM2EwZSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoib3VpIG91aSBiYWd1ZXR0ZSIsInRlYW1faWQiOiI4NTAzZmI4MS01MjhiLTRiMmQtOGIxZi03ODNiY2M4YmY2ZGIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJsZXMtY2VudHVyaW9ucy12ZXJ0cyIsImdpdmVuX25hbWUiOiJvdWkgb3VpIGJhZ3VldHRlIn0.EZpBLan-yyD4UhpW8gMwTxPFpLCQNf7vD-5AUX3MNxUsPMn-9Lq234HR0dMYTPtGOoVXb9Z-eA3WLd0qn83P_YGV0s6yPGbluHASlbzoUvDk6CPGbd8j2wRJieMAUhj0MlAGV76AAO8DbqEkJD52ubOfUh9Gtguj7J5z_5-MDQuNisODKW3uMCOpn0v0mIGB9dLY5XNLBjjM1WMS72ujDpdGjAgywmBVSuxPgx-5mekWWAK87SiHuH6K7nmT643rfcYlmi2-Zg4_Nt4swVDrpd6sgyLw9JhfgJ5y_n1PUF_50ZUK5owHRTG1EjwCoV-BUzHp25oW2N0961SNgYSUNw",
+    "Content-Type": "application/json"
+}
 
-# Charger l'image du villageois
+# Load villager image
 villager_img = pygame.image.load("assets2D/villagers/villager.png").convert_alpha()
-
-# Redimensionner l'image pour qu'elle fasse 1x1 case
 villager_scaled = pygame.transform.scale(villager_img, (plateau.CELL_SIZE, plateau.CELL_SIZE))
 
+# Villager list (will be updated via API)
+villagers = []
 
-# Charger les villageois depuis le fichier JSON
-villagers_data = load_villagers_data('villageois.json')
-villagers = get_villagers_from_data(villagers_data)
+def fetch_villagers():
+    """Fetch all villagers' positions from the API and update their locations."""
+    global villagers
+    response = requests.get(base_url, headers=headers)
+    
+    if response.status_code == 200:
+        data = response.json()  # Assuming API returns a list of villagers
+        villagers = [
+            {"id": v["idVillageois"], "name": v["nom"], "position": (v["positionX"], v["positionY"])}
+            for v in data
+        ]
+    else:
+        print(f"❌ Error fetching villagers: {response.status_code} - {response.text}")
 
-# Fonction pour dessiner tous les villageois
 def draw_villagers():
-    """Fonction pour dessiner les villageois sur le plateau."""
+    """Draw villagers at their correct positions."""
     for villager in villagers:
-        # Calculer la position en pixels à partir des coordonnées en cases
-        position_x, position_y = villager['position']
-        # Dessiner le villageois à sa position
-        plateau.screen.blit(villager_scaled, (position_x * plateau.CELL_SIZE, position_y * plateau.CELL_SIZE))
+        x, y = villager["position"]
+        x_pixel, y_pixel = x * plateau.CELL_SIZE, y * plateau.CELL_SIZE
+        plateau.screen.blit(villager_scaled, (x_pixel, y_pixel))
 
 def handle_keys():
-    """Fonction pour gérer les entrées clavier et déplacer le villageois d'une case."""
-    global villagers
+    """Press 'R' to refresh villager positions manually."""
     keys = pygame.key.get_pressed()
-
-    # Déplacer vers la droite (1 case)
-    if keys[pygame.K_RIGHT]:
-        for villager in villagers:
-            villager['position'] = (villager['position'][0] + 1, villager['position'][1])
-
-    # Déplacer vers la gauche (1 case)
-    if keys[pygame.K_LEFT]:
-        for villager in villagers:
-            villager['position'] = (villager['position'][0] - 1, villager['position'][1])
-
-    # Déplacer vers le bas (1 case)
-    if keys[pygame.K_DOWN]:
-        for villager in villagers:
-            villager['position'] = (villager['position'][0], villager['position'][1] + 1)
-
-    # Déplacer vers le haut (1 case)
-    if keys[pygame.K_UP]:
-        for villager in villagers:
-            villager['position'] = (villager['position'][0], villager['position'][1] - 1)
+    if keys[pygame.K_r]:  # Refresh positions
+        fetch_villagers()
 
 def draw_coordinates():
-    """Fonction pour dessiner les coordonnées des villageois en bas de la grille."""
-    font = pygame.font.SysFont("Arial", 18)  # Police pour le texte des coordonnées
+    """Display coordinates of villagers on the screen."""
+    font = pygame.font.SysFont("Arial", 18)
     for villager in villagers:
-        position_x, position_y = villager['position']
-        # Affichage des coordonnées sous la grille
-        coord_text = font.render(f"Coordonnées: ({position_x}, {position_y})", True, (255, 255, 255))
-        # Dessiner le texte en bas, centré
-        plateau.screen.blit(coord_text, (plateau.WIDTH // 2 - coord_text.get_width() // 2, plateau.HEIGHT - 30))
-
-def main():
-    running = True
-    while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-
-        handle_keys()  # Gérer les mouvements des villageois
-
-        plateau.screen.fill(plateau.GREEN)  # Fond vert
-
-        # Dessiner la grille, le bosquet et les villageois
-        plateau.draw_grid()
-        draw_villagers()  # Dessiner tous les villageois
-
-        pygame.display.flip()  # Rafraîchir l'affichage
-
-    pygame.quit()
-
-if __name__ == "__main__":
-    main()
+        x, y = villager["position"]
+        coord_text = font.render(f"Coord: ({x}, {y})", True, (255, 255, 255))
+        plateau.screen.blit(coord_text, (10, plateau.HEIGHT - 30))
