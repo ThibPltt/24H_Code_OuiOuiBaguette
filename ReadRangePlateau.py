@@ -22,7 +22,7 @@ def get_case_par_coord(x, y):
     
     for case in plateau:
         if case["coord_x"] == x and case["coord_y"] == y:
-            return case["ressources"]  # Retourne directement la case trouvée
+            return case  # Retourne directement la case trouvée
 
     return None  # Retourne None si aucune case ne correspond
 

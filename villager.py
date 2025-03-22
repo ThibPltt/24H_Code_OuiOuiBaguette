@@ -24,11 +24,12 @@ def get_villagers_from_data(data):
 # Charger l'image du villageois
 villager_img = pygame.image.load("assets2D/villagers/villager.png").convert_alpha()
 
-# Redimensionner l'image du villageois pour qu'elle couvre 3x3 cases (3x CELL_SIZE)
-villager_scaled = pygame.transform.scale(villager_img, (3 * plateau.CELL_SIZE, 3 * plateau.CELL_SIZE))
+# Redimensionner l'image pour qu'elle fasse 1x1 case
+villager_scaled = pygame.transform.scale(villager_img, (plateau.CELL_SIZE, plateau.CELL_SIZE))
+
 
 # Charger les villageois depuis le fichier JSON
-villagers_data = load_villagers_data('Datas/VillageoisData')
+villagers_data = load_villagers_data('villageois.json')
 villagers = get_villagers_from_data(villagers_data)
 
 # Fonction pour dessiner tous les villageois
@@ -41,30 +42,39 @@ def draw_villagers():
         plateau.screen.blit(villager_scaled, (position_x * plateau.CELL_SIZE, position_y * plateau.CELL_SIZE))
 
 def handle_keys():
-    """Fonction pour gérer les entrées clavier et déplacer le villageois."""
+    """Fonction pour gérer les entrées clavier et déplacer le villageois d'une case."""
     global villagers
-
     keys = pygame.key.get_pressed()
 
-    # Déplacer vers la droite
+    # Déplacer vers la droite (1 case)
     if keys[pygame.K_RIGHT]:
         for villager in villagers:
             villager['position'] = (villager['position'][0] + 1, villager['position'][1])
 
-    # Déplacer vers la gauche
+    # Déplacer vers la gauche (1 case)
     if keys[pygame.K_LEFT]:
         for villager in villagers:
             villager['position'] = (villager['position'][0] - 1, villager['position'][1])
 
-    # Déplacer vers le bas
+    # Déplacer vers le bas (1 case)
     if keys[pygame.K_DOWN]:
         for villager in villagers:
             villager['position'] = (villager['position'][0], villager['position'][1] + 1)
 
-    # Déplacer vers le haut
+    # Déplacer vers le haut (1 case)
     if keys[pygame.K_UP]:
         for villager in villagers:
             villager['position'] = (villager['position'][0], villager['position'][1] - 1)
+
+def draw_coordinates():
+    """Fonction pour dessiner les coordonnées des villageois en bas de la grille."""
+    font = pygame.font.SysFont("Arial", 18)  # Police pour le texte des coordonnées
+    for villager in villagers:
+        position_x, position_y = villager['position']
+        # Affichage des coordonnées sous la grille
+        coord_text = font.render(f"Coordonnées: ({position_x}, {position_y})", True, (255, 255, 255))
+        # Dessiner le texte en bas, centré
+        plateau.screen.blit(coord_text, (plateau.WIDTH // 2 - coord_text.get_width() // 2, plateau.HEIGHT - 30))
 
 def main():
     running = True
@@ -79,7 +89,6 @@ def main():
 
         # Dessiner la grille, le bosquet et les villageois
         plateau.draw_grid()
-        plateau.draw_bosquet()
         draw_villagers()  # Dessiner tous les villageois
 
         pygame.display.flip()  # Rafraîchir l'affichage
