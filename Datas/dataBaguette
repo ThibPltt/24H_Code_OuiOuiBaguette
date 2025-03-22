@@ -1,0 +1,146 @@
+{
+  "idEquipe": "8503fb81-528b-4b2d-8b1f-783bcc8bf6db",
+  "nom": "Oui Oui Baguette",
+  "type": "ETU",
+  "villageois": [
+    {
+      "idVillageois": "8c0f8ada-fb55-43ed-a8f4-92f71ddf54ed",
+      "nom": "Michel",
+      "dateDerniereAction": null,
+      "disponible": true,
+      "type": {
+        "nom": "PEON",
+        "description": "Paysan de base",
+        "mutliplicateurDeCooldown": 1.0
+      },
+      "positionX": 22,
+      "positionY": 4
+    },
+    {
+      "idVillageois": "b9bef46b-28ba-431f-ae2f-1bdb660112de",
+      "nom": "Michel",
+      "dateDerniereAction": null,
+      "disponible": true,
+      "type": {
+        "nom": "PEON",
+        "description": "Paysan de base",
+        "mutliplicateurDeCooldown": 1.0
+      },
+      "positionX": 22,
+      "positionY": 4
+    },
+    {
+      "idVillageois": "77451f36-4820-4d6d-a783-c6fcc74f06c4",
+      "nom": "Michel",
+      "dateDerniereAction": null,
+      "disponible": true,
+      "type": {
+        "nom": "PEON",
+        "description": "Paysan de base",
+        "mutliplicateurDeCooldown": 1.0
+      },
+      "positionX": 22,
+      "positionY": 4
+    },
+    {
+      "idVillageois": "b9051f13-4fd1-4937-92ae-69477e6b6210",
+      "nom": "Michel",
+      "dateDerniereAction": null,
+      "disponible": true,
+      "type": {
+        "nom": "PEON",
+        "description": "Paysan de base",
+        "mutliplicateurDeCooldown": 1.0
+      },
+      "positionX": 22,
+      "positionY": 4
+    },
+    {
+      "idVillageois": "7dbe563f-df4c-4cdf-b845-adcb653219eb",
+      "nom": "Michel",
+      "dateDerniereAction": null,
+      "disponible": true,
+      "type": {
+        "nom": "PEON",
+        "description": "Paysan de base",
+        "mutliplicateurDeCooldown": 1.0
+      },
+      "positionX": 22,
+      "positionY": 4
+    }
+  ],
+  "ressources": [
+    {
+      "ressource": {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "description": "POWER",
+        "nom": "ENERGIE",
+        "type": "PRODUITE"
+      },
+      "quantite": 0
+    },
+    {
+      "ressource": {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "description": "De la pierre",
+        "nom": "PIERRE",
+        "type": "RECOLTABLE"
+      },
+      "quantite": 0
+    },
+    {
+      "ressource": {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "description": "De la nourriture pour manger",
+        "nom": "NOURRITURE",
+        "type": "RECOLTABLE"
+      },
+      "quantite": 0
+    },
+    {
+      "ressource": {
+        "idRessource": "ce85e890-c95c-41fa-84bd-781f10d15a40",
+        "description": "Du charbon",
+        "nom": "CHARBON",
+        "type": "RECOLTABLE"
+      },
+      "quantite": 0
+    },
+    {
+      "ressource": {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "description": "Score de pollution. Plus c'est haut, moins c'est bien ",
+        "nom": "POLLUTION",
+        "type": "PRODUITE"
+      },
+      "quantite": 0
+    },
+    {
+      "ressource": {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "description": "Votre score",
+        "nom": "POINT",
+        "type": "PRODUITE"
+      },
+      "quantite": 0
+    },
+    {
+      "ressource": {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "description": "Du bois",
+        "nom": "BOIS",
+        "type": "RECOLTABLE"
+      },
+      "quantite": 0
+    },
+    {
+      "ressource": {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "description": "Du fer",
+        "nom": "FER",
+        "type": "RECOLTABLE"
+      },
+      "quantite": 0
+    }
+  ]
+}

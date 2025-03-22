@@ -1,0 +1,2004 @@
+[
+  {
+    "id": "f644a659-20b1-4c8e-a452-489f250a2d03",
+    "description": "Elle n'est pas au Canada",
+    "type": "CABANE_DE_BUCHERON",
+    "tempsConstruction": 10,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 100
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 10
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 50
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 100
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "d071f12f-c3bd-4d8b-877d-5c5297156b16",
+    "description": "La piste de danse des arbres, où les troncs valsent avec les lames pour devenir planches et poutres.",
+    "type": "SCIERIE",
+    "tempsConstruction": 15,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Plaine",
+      "Désert"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      },
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 30
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 100
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 250
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 50
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 50
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 300
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "06fceabf-3e07-441f-92fd-fc37d2647611",
+    "description": "Le repaire des casse-cous de la pierre !",
+    "type": "ATELIER_DE_TAILLE_DE_PIERRE",
+    "tempsConstruction": 10,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 100
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 50
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 10
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 50
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 150
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "ee5bb0ef-dce4-4a7e-814e-24b55edcbf00",
+    "description": "Gare aux éclats, c’est un véritable ballet de poussières et de marteaux!",
+    "type": "CARRIERE",
+    "tempsConstruction": 15,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 150
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 100
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 100
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 100
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 300
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 400
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "8bb4166a-dc48-4e2c-97af-d9f6af295f54",
+    "description": "Le monstre métallique qui mange la terre pour cracher de précieux morceaux de fer ! Un peu comme une taupe mécanique géante, sauf qu’elle ne dort jamais et n’a pas peur de se salir les pelles.",
+    "type": "EXCAVATRICE_A_FER",
+    "tempsConstruction": 10,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 50
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 50
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 20
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 100
+      }
+    ],
+    "bonusConstruction": [],
+    "bonus": [
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "526696de-5be0-4153-ad63-2f463f38b13c",
+    "description": "Bienvenue dans le royaume souterrain du fer, où les mineurs jouent à cache-cache avec des pépites rouges et des stalactites. Attention, casque obligatoire, car ça tombe parfois du ciel… enfin, du plafond.",
+    "type": "MINE_DE_FER",
+    "tempsConstruction": 15,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 2
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 100
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 100
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 400
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 200
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 100
+      }
+    ],
+    "bonusConstruction": [],
+    "bonus": [
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "7df3f7fc-82ba-495d-9c01-254cc63f739d",
+    "description": "L’atelier des alchimistes du bois, où les troncs se transforment en charbon magique. Ça crépite, ça chauffe, et ça sent bon le feu de camp… enfin, pour ceux qui aiment les barbecues permanents !",
+    "type": "ATELIER_DE_CHARBONNIER",
+    "tempsConstruction": 10,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 20
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 100
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 50
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 100
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "ce85e890-c95c-41fa-84bd-781f10d15a40",
+        "ressource": "CHARBON",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "7785f3ce-9b84-45f5-928e-8f923c5c200f",
+    "description": "Les montagnes noires du sous-sol, où le charbon chante son ode aux énergies fossiles (et à la poussière !).",
+    "type": "MINE_DE_CHARBON",
+    "tempsConstruction": 15,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 150
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 300
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 100
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 100
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 100
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 400
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "ce85e890-c95c-41fa-84bd-781f10d15a40",
+        "ressource": "CHARBON",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      },
+      {
+        "idRessource": "ce85e890-c95c-41fa-84bd-781f10d15a40",
+        "ressource": "CHARBON",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "9e9d1eba-bb96-47bd-9db6-d7b14496a7ac",
+    "description": "L’acrobate des campagnes, dansant au gré du vent pour écraser le grain ou pomper l’eau.",
+    "type": "MOULIN",
+    "tempsConstruction": 10,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Plaine",
+      "Désert"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 50
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 200
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 50
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 50
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 20
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 300
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "b5fb9ef3-0fca-4ead-9f91-4dec46a89da7",
+    "description": "Le centre-ville des animaux, où tout le monde trouve son poste : les poules pondent, les vaches ruminent, et le tracteur fait sa tournée.",
+    "type": "FERME",
+    "tempsConstruction": 15,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 250
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 200
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 400
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 30
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 150
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 600
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 2,
+        "cibleBonus": "CASE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "7a82b6e3-f1e7-4f7c-b443-c88bfe280f79",
+    "description": "Les marins y dansent",
+    "type": "PORT",
+    "tempsConstruction": 15,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Lac"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 30
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 250
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 150
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 400
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 150
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 600
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 2,
+        "cibleBonus": "CASE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "cf5db9dc-1fde-4d9f-a4dc-66efa1960e9e",
+    "description": "Le danseur gracieux des plaines, qui tourne pour capturer les murmures du vent et les transformer en électricité.",
+    "type": "EOLIENNE",
+    "tempsConstruction": 10,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 300
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 500
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 100
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 200
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 250
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 600
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 2,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "f2ce4cea-da96-4c96-83bf-26e5766c063d",
+    "description": "La locomotive des temps modernes, qui transforme charbon en fumée et énergie à plein régime.",
+    "type": "CENTRALE_ELECTRIQUE_AU_CHARBON",
+    "tempsConstruction": 40,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Plaine",
+      "Désert"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "ce85e890-c95c-41fa-84bd-781f10d15a40",
+        "ressource": "CHARBON",
+        "quantite": 3
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 4
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 400
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 300
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 500
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 400
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 300
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1000
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 10,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "e5c213a5-e1fe-4c3f-9c93-d07014fe1c7f",
+    "description": "Le magicien des gaz, qui fait des flammes pour illuminer nos vies (sans trop de magie noire, promis !).",
+    "type": "CENTRALE_AU_METHANE",
+    "tempsConstruction": 20,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 6
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 400
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 400
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 300
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 350
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 300
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1000
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 5,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "926ebb28-41dc-4d18-aa06-f272c864071e",
+    "description": "L’usine écolo qui transforme nos restes en énergie, comme un composteur surdimensionné et électrique.",
+    "type": "CENTRALE_A_BIOMASSE",
+    "tempsConstruction": 20,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 5
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 350
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 300
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 300
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 350
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 400
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1000
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 5,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "43842bde-7fbf-43fc-a5ad-9474301757f4",
+    "description": "La cascade domestiquée, où l’eau danse et fait tourner les turbines pour alimenter nos gadgets.",
+    "type": "TURBINE_HYDRAULIQUE",
+    "tempsConstruction": 30,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Lac"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 800
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 800
+      },
+      {
+        "idRessource": "ce85e890-c95c-41fa-84bd-781f10d15a40",
+        "ressource": "CHARBON",
+        "quantite": 1200
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 400
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 400
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 500
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1300
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 5,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "a23bac9c-6253-4257-8ee7-4688e531a022",
+    "description": "Le sanctuaire des arbres, où l’on travaille dur pour renouveler les forêts tout en respectant Dame Nature.",
+    "type": "INSTALLATION_FORESTIERE",
+    "tempsConstruction": 15,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Plaine",
+      "Désert"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 500
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 250
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 300
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 400
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 100
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 900
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 2,
+        "cibleBonus": "CASE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "RECOLTE",
+          "descriptionDeclencheur": "Declenchement suite à une récolte"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "124e0a33-e9e3-405e-86c8-e4bfc5cf8294",
+    "description": "L’usine du futur, qui recycle tout et redonne vie aux matériaux oubliés.",
+    "type": "USINE_DE_RENOUVELLEMENT",
+    "tempsConstruction": 20,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Plaine",
+      "Désert"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      },
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 700
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 150
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 450
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 450
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 250
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1100
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 2,
+        "cibleBonus": "CASE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 2,
+        "cibleBonus": "CASE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "41fc5f4c-86ea-4f9b-b85d-16cf9f0db668",
+    "description": "Le piège à CO2, où le carbone fait une retraite forcée loin de l’atmosphère.",
+    "type": "PUITS_DE_CARBONE",
+    "tempsConstruction": 20,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Plaine",
+      "Désert"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 2
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 3
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1000
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 400
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 800
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 800
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 300
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1400
+      }
+    ],
+    "bonus": [],
+    "supplement": []
+  },
+  {
+    "id": "45b1bcde-39c6-46eb-ad17-ed7d1b090c89",
+    "description": "La sentinelle solitaire, qui scrute l’horizon à la recherche de fumée suspecte ou de couchers de soleil parfaits.",
+    "type": "TOUR_DE_GUET",
+    "tempsConstruction": 10,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 100
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 150
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 350
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 50
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 100
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 800
+      }
+    ],
+    "bonus": [],
+    "supplement": []
+  },
+  {
+    "id": "c8d8fee6-0c49-4ab8-9350-dac8840fabce",
+    "description": "La machine à rêves, où l’on chasse les étoiles et se perd dans l’immensité du cosmos",
+    "type": "OBSERVATOIRE",
+    "tempsConstruction": 20,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Plaine",
+      "Désert"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 1000
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 350
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 800
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 250
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1400
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 500
+      }
+    ],
+    "bonus": [],
+    "supplement": []
+  },
+  {
+    "id": "916c394d-bae6-4617-9da5-948566da1ce8",
+    "description": "La boîte à trésors de l’histoire, où chaque salle est une machine à remonter le temps.",
+    "type": "MUSEE",
+    "tempsConstruction": 20,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Plaine",
+      "Désert"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 2
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 350
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 700
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 150
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 800
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 450
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1000
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 2,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "41a16463-6ce5-412d-82d2-2dbc8b0294d6",
+    "description": "Le temple des lecteurs, où les livres murmurent des histoires à qui veut bien écouter.",
+    "type": "BIBLIOTHEQUE",
+    "tempsConstruction": 30,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 2
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 450
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1000
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 900
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 700
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 150
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1400
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "43950915-59ef-4f8a-b94e-5d6ca91eb8ba",
+    "description": "L’arène de l’imaginaire, où drames et comédies prennent vie sous les projecteurs.",
+    "type": "THEATRE",
+    "tempsConstruction": 30,
+    "estUneMerveille": false,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 2
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 700
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 500
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 150
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1000
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 1300
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 1000
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 4,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "55769713-ae93-42b4-8ab6-541c09c69b95",
+    "description": "Le colosse immobile, qui surveille la ville et inspire respect ou curiosité (parfois un selfie !).",
+    "type": "GRANDE_STATUE",
+    "tempsConstruction": 100,
+    "estUneMerveille": true,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 1200
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 500
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 2000
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 250
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1000
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 3000
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "f40ec378-94a0-48e2-b89b-e89785ae9b12",
+    "description": "L’hôtel flottant qui mêle luxe, vues imprenables et buffets à volonté.",
+    "type": "BATEAU_DE_CROISIERE",
+    "tempsConstruction": 130,
+    "estUneMerveille": true,
+    "contructibleSur": [
+      "Lac"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 1
+      },
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 2500
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 1000
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 350
+      },
+      {
+        "idRessource": "ce85e890-c95c-41fa-84bd-781f10d15a40",
+        "ressource": "CHARBON",
+        "quantite": 3000
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 500
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1000
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 4500
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 4,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "61b75d35-fcf3-4632-810c-887c834df492",
+    "description": "Le château des livres, où des milliers de volumes se pressent pour partager leurs secrets.",
+    "type": "GRANDE_BIBLIOTHEQUE",
+    "tempsConstruction": 150,
+    "estUneMerveille": true,
+    "contructibleSur": [
+      "Plaine",
+      "Désert"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 250
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 2500
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 1500
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 500
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 500
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 3200
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 4,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "7d6b4677-f196-4d83-9905-c2c0e4a02293",
+    "description": "L’écrin de contes de fées, avec ses tours majestueuses et ses salles qui résonnent encore des récits d’antan.",
+    "type": "CHATEAU",
+    "tempsConstruction": 200,
+    "estUneMerveille": true,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 2
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 2500
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 700
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 250
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 2000
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 800
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 3500
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 5,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "4d627c8e-52ba-4ee6-b97b-1dab1c8cc68b",
+    "description": "Le soleil miniature, qui promet une énergie infinie sans les caprices des étoiles.",
+    "type": "REACTEUR_A_FUSION_NUCLEAIRE",
+    "tempsConstruction": 200,
+    "estUneMerveille": true,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [],
+    "coutConstruction": [
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 4000
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 350
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 2000
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 2500
+      },
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 700
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 4000
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 10,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      },
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  },
+  {
+    "id": "3889ace3-2fe3-457b-90c8-3e4f2d6d4ff7",
+    "description": "Le palais des décisions sérieuses… et parfois des débats un peu trop animés.",
+    "type": "CAPITOLE",
+    "tempsConstruction": 120,
+    "estUneMerveille": true,
+    "contructibleSur": [
+      "Désert",
+      "Plaine"
+    ],
+    "coutParTour": [
+      {
+        "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+        "ressource": "ENERGIE",
+        "quantite": 1
+      }
+    ],
+    "coutConstruction": [
+      {
+        "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+        "ressource": "NOURRITURE",
+        "quantite": 500
+      },
+      {
+        "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+        "ressource": "PIERRE",
+        "quantite": 2000
+      },
+      {
+        "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+        "ressource": "BOIS",
+        "quantite": 1200
+      },
+      {
+        "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+        "ressource": "FER",
+        "quantite": 1200
+      },
+      {
+        "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+        "ressource": "POLLUTION",
+        "quantite": 250
+      }
+    ],
+    "bonusConstruction": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 3500
+      }
+    ],
+    "bonus": [
+      {
+        "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+        "ressource": "POINT",
+        "quantite": 3,
+        "cibleBonus": "EQUIPE",
+        "declenchement": {
+          "declencheur": "AUTO",
+          "descriptionDeclencheur": "Declenchement d'un tour de jeu"
+        }
+      }
+    ],
+    "supplement": []
+  }
+]

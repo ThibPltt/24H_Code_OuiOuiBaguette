@@ -1,0 +1,67 @@
+[
+  {
+    "idVillageois": "b9051f13-4fd1-4937-92ae-69477e6b6210",
+    "nom": "Michel",
+    "dateDerniereAction": null,
+    "disponible": true,
+    "type": {
+      "nom": "PEON",
+      "description": "Paysan de base",
+      "mutliplicateurDeCooldown": 1.0
+    },
+    "positionX": 22,
+    "positionY": 4
+  },
+  {
+    "idVillageois": "7dbe563f-df4c-4cdf-b845-adcb653219eb",
+    "nom": "Michel",
+    "dateDerniereAction": null,
+    "disponible": true,
+    "type": {
+      "nom": "PEON",
+      "description": "Paysan de base",
+      "mutliplicateurDeCooldown": 1.0
+    },
+    "positionX": 22,
+    "positionY": 4
+  },
+  {
+    "idVillageois": "8c0f8ada-fb55-43ed-a8f4-92f71ddf54ed",
+    "nom": "Michel",
+    "dateDerniereAction": null,
+    "disponible": true,
+    "type": {
+      "nom": "PEON",
+      "description": "Paysan de base",
+      "mutliplicateurDeCooldown": 1.0
+    },
+    "positionX": 22,
+    "positionY": 4
+  },
+  {
+    "idVillageois": "b9bef46b-28ba-431f-ae2f-1bdb660112de",
+    "nom": "Michel",
+    "dateDerniereAction": null,
+    "disponible": true,
+    "type": {
+      "nom": "PEON",
+      "description": "Paysan de base",
+      "mutliplicateurDeCooldown": 1.0
+    },
+    "positionX": 22,
+    "positionY": 4
+  },
+  {
+    "idVillageois": "77451f36-4820-4d6d-a783-c6fcc74f06c4",
+    "nom": "Michel",
+    "dateDerniereAction": null,
+    "disponible": true,
+    "type": {
+      "nom": "PEON",
+      "description": "Paysan de base",
+      "mutliplicateurDeCooldown": 1.0
+    },
+    "positionX": 22,
+    "positionY": 4
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "idRessource": "1d78a7ea-2f99-4d37-8fd5-f7fe920bab41",
+    "description": "Du bois",
+    "nom": "BOIS",
+    "type": "RECOLTABLE"
+  },
+  {
+    "idRessource": "953a6c6a-ffb8-49fc-a7bb-f03236eb7ec5",
+    "description": "De la pierre",
+    "nom": "PIERRE",
+    "type": "RECOLTABLE"
+  },
+  {
+    "idRessource": "80ed5f30-2706-4848-8f97-4cdc76ac903c",
+    "description": "Du fer",
+    "nom": "FER",
+    "type": "RECOLTABLE"
+  },
+  {
+    "idRessource": "ce85e890-c95c-41fa-84bd-781f10d15a40",
+    "description": "Du charbon",
+    "nom": "CHARBON",
+    "type": "RECOLTABLE"
+  },
+  {
+    "idRessource": "60a5fea5-64c6-4c51-80cd-149b71b85415",
+    "description": "De la nourriture pour manger",
+    "nom": "NOURRITURE",
+    "type": "RECOLTABLE"
+  },
+  {
+    "idRessource": "b5bc8164-3cbb-4669-a539-af475bdf06e4",
+    "description": "POWER",
+    "nom": "ENERGIE",
+    "type": "PRODUITE"
+  },
+  {
+    "idRessource": "5c61c934-8683-49be-84dc-30eb386ec4b5",
+    "description": "Votre score",
+    "nom": "POINT",
+    "type": "PRODUITE"
+  },
+  {
+    "idRessource": "a5b606f1-b0a9-4dc1-860e-62d88ad12a22",
+    "description": "Score de pollution. Plus c'est haut, moins c'est bien ",
+    "nom": "POLLUTION",
+    "type": "PRODUITE"
+  }
+]
