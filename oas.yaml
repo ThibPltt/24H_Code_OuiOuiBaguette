@@ -1,0 +1,1194 @@
+openapi: 3.0.3
+info:
+  title: 24h2025
+  version: 1.0.0
+  description: |-
+    Contrat API des 24h du code 2025.  
+    Version Participant.
+  license:
+    name: MIT License
+    url: 'https://opensource.org/licenses/MIT'
+paths:
+  /batiments:
+    summary: Opérations de paramétrage sur les bâtiments
+    get:
+      tags:
+        - Batiments
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Batiment'
+          description: Successful operation
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+      operationId: getBuildings
+      summary: Récupère la liste des bâtiments
+  /batiments/disponible:
+    summary: Récupère la liste des bâtiments disponibles actuellement pour toutes les équipes
+    get:
+      tags:
+        - Batiments
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Batiment'
+          description: Successful operation
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+      operationId: getAvailableBuildings
+      summary: Récupère la liste des bâtiments disponibles actuellement pour toutes les équipes
+  /batiments/{idBatiment}:
+    summary: Récupère le batiment via son id
+    get:
+      tags:
+        - Batiments
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Batiment'
+          description: Successful operation
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+      operationId: getBuildingById
+      summary: Récupère le batiment via son id
+      parameters:
+        - name: idBatiment
+          description: Identifiant technique du batiment
+          schema:
+            type: string
+            format: uuid
+          in: path
+          required: true
+  /equipes:
+    summary: Opérations de paramétrage sur les équipes
+    get:
+      tags:
+        - Equipes
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Equipe'
+          description: Récupération effectuée avec succès
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+      operationId: getAllTeam
+      summary: Récupération de la liste des équipes
+  /monde/stats: {}
+  /monde/stats/classement: {}
+  /monde/stats/pollution: {}
+  '/equipes/{idEquipe}':
+    summary: Opération sur une équipe
+    get:
+      tags:
+        - Equipes
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Equipe'
+          description: La récupération à été réalisée avec succès
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+        '403':
+          $ref: '#/components/responses/ErreurAccesDroit'
+        '404':
+          $ref: '#/components/responses/ErreurRessourceNonTrouve'
+      operationId: getTeam
+      summary: Récupération du détails d'une équipe
+    parameters:
+      -
+        name: idEquipe
+        description: Identifiant technique de l'équipe
+        schema:
+          type: string
+        in: path
+        required: true
+  '/equipes/{idEquipe}/villageois':
+    get:
+      tags:
+        - Villageois
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Villageois'
+          description: Récupération effectuée avec accès
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+        '403':
+          $ref: '#/components/responses/ErreurAccesDroit'
+        '404':
+          $ref: '#/components/responses/ErreurRessourceNonTrouve'
+      operationId: getTeamVillagers
+      summary: Récupère les détails des villageois d'une équipe
+    parameters:
+      -
+        name: idEquipe
+        description: Identifiant technique de l'équipe
+        schema:
+          type: string
+        in: path
+        required: true
+  '/equipes/{idEquipe}/villageois/{idVillageois}':
+    get:
+      tags:
+        - Villageois
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Villageois'
+          description: Récupération effectuée avec accès
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+        '403':
+          $ref: '#/components/responses/ErreurAccesDroit'
+        '404':
+          $ref: '#/components/responses/ErreurRessourceNonTrouve'
+      operationId: getTeamVillager
+      summary: Récupère les détails d'un villageois d'une équipe
+    parameters:
+      -
+        name: idEquipe
+        description: Identifiant technique de l'équipe
+        schema:
+          type: string
+        in: path
+        required: true
+      -
+        name: idVillageois
+        description: Identifiant technique du villageois de l'équipe
+        schema:
+          type: string
+        in: path
+        required: true
+  /ressources:
+    get:
+      tags:
+        - Ressources
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ressource'
+              examples:
+                Les ressources:
+                  value:
+                    -
+                      idRessource: f895b88b-b936-4cc9-88b5-14665ebdd616
+                      description: Du bois d'arbre de la foret
+                      nom: BOIS
+                      type: RECOLTABLE
+                    -
+                      idRessource: 3fafdfaf-43e2-4635-855a-4a5535f651fe
+                      description: De la pierre. Gros cailloux.
+                      nom: PIERRE
+                      type: RECOLTABLE
+                    -
+                      idRessource: 7eff4b73-40e6-4b20-92f5-f261f3efcd96
+                      description: Du fer
+                      nom: FER
+                      type: RECOLTABLE
+                    -
+                      idRessource: dea403b1-6e2d-40f2-94d8-003397673592
+                      description: Du charbon
+                      nom: CHARBON
+                      type: RECOLTABLE
+                    -
+                      idRessource: 3594cacf-3a17-46b6-b20d-d2d1737f3541
+                      description: MANGER
+                      nom: NOURRITURE
+                      type: RECOLTABLE
+                    -
+                      idRessource: c5540a59-10df-46ad-9285-6c9f23e94e82
+                      description: 'De l''energie, permet de faire fonctionner certain batiment'
+                      nom: ENERGIE
+                      type: PRODUITE
+                    -
+                      idRessource: f270cf43-0526-46e2-9599-8155325e5691
+                      description: Le score
+                      nom: POINT
+                      type: PRODUITE
+                    -
+                      idRessource: 87a26cbc-0bb3-4943-91af-a5a6cc68b173
+                      description: 'Du bon gros CO2 qui pollue, pas super cool'
+                      nom: POLLUTION
+                      type: PRODUITE
+          description: La liste des ressources existante
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+      operationId: getAllRessources
+      summary: Récupération de la liste des ressources
+  /monde/map:
+    get:
+      tags:
+        - Monde
+      parameters:
+        -
+          examples:
+            Entre les coordonnées 0 et 10:
+              value: '"0,10"'
+          name: x_range
+          description: Etendu horizontale de récupération de la carte
+          schema:
+            type: string
+          in: query
+          required: false
+        -
+          examples:
+            Entre les coordonnées 20 et 30:
+              value: '"20,30"'
+          name: y_range
+          description: Etendu verticale de récupération de la carte
+          schema:
+            type: string
+          in: query
+          required: false
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Case'
+          description: La carte demandé
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErreurAPI'
+              examples:
+                Paramètre d'étendu présent et invalide:
+                  value:
+                    code: '25'
+                    message: Les paramètres d'étendues présents sont invalide
+                    timestamp: '2018-02-10T09:30Z'
+          description: Requête incorrecte
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+        '403':
+          $ref: '#/components/responses/ErreurAccesDroit'
+      operationId: getMap
+      summary: Récupération de la carte
+      description: Récupération de la map
+  '/equipes/{idEquipe}/villageois/{idVillageois}/demander-action':
+    post:
+      requestBody:
+        description: Information sur l'action à réaliser
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DemandeAction'
+        required: true
+      tags:
+        - Villageois
+      responses:
+        '200':
+          description: L'action à bien été prise en compte
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReponseAction'
+        '400':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErreurAPI'
+              examples:
+                Villageois non disponible:
+                  value:
+                    code: '30'
+                    message: 'Ce villageois se repose, il ne peut réaliser d''action'
+                    timestamp: '2018-02-10T09:30Z'
+                Action impossible:
+                  value:
+                    code: '31'
+                    message: Il n'est pas possible de réaliser cette action ici
+                    timestamp: '2018-02-10T09:30Z'
+          description: Impossible de réaliser l'action
+        '401':
+          $ref: '#/components/responses/ErreurAccesNonAuthentifie'
+        '403':
+          $ref: '#/components/responses/ErreurAccesDroit'
+        '404':
+          $ref: '#/components/responses/ErreurRessourceNonTrouve'
+      operationId: makeVillagerDoSomething
+      summary: Ordonne à un villageois de réaliser une action
+    parameters:
+      - name: idEquipe
+        description: Identifiant technique de l'équipe
+        schema:
+          type: string
+          format: uuid
+        in: path
+        required: true
+      - name: idVillageois
+        description: Identifiant technique du villageois de l'équipe
+        schema:
+          type: string
+          format: uuid
+        in: path
+        required: true
+components:
+  schemas:
+    BatimentRessource:
+      title: Root Type for BatimentCout
+      description: 'Cout d''un batiment, en ressource.'
+      required:
+        - quantite
+        - idRessource
+        - ressource
+      type: object
+      properties:
+        idRessource:
+          description: Id technique de la ressource
+          type: string
+        ressource:
+          $ref: '#/components/schemas/NomRessource'
+          description: Nom de la ressource
+        quantite:
+          description: quantite de ressource consommée/gagnée
+          type: integer
+      example:
+        idRessource: 7eff4b73-40e6-4b20-92f5-f261f3efcd96
+        ressource: FER
+        quantite: 200
+    BatimentBonus:
+      title: Root Type for BatimentBonus
+      description: Bonus apporté par un batiment
+      required:
+        - idRessource
+        - ressource
+        - quantite
+        - cibleBonus
+        - declenchement
+      type: object
+      properties:
+        idRessource:
+          description: Id technique de la ressource
+          type: string
+        ressource:
+          description: Nom de la ressource
+          type: string
+        quantite:
+          description: quantite de ressource gagnée
+          type: integer
+        cibleBonus:
+          description: A qui est ciblé le bonus
+          enum:
+            - EQUIPE
+            - CASE
+        declenchement:
+          required:
+            - declencheur
+            - descriptionDeclencheur
+          type: object
+          properties:
+            declencheur:
+              description: Ce qui déclenche l'obtention du bonus
+              type: string
+            descriptionDeclencheur:
+              description: Information sur le déclencheur
+              type: string
+      example:
+        idRessource: 7eff4b73-40e6-4b20-92f5-f261f3efcd96
+        ressource: FER
+        quantite: 1
+        cibleBonus: EQUIPE
+        declenchement:
+          declencheur: RECOLTE
+          descriptionDeclencheur: Octroit une quantite de ressource bonus à la récolte
+    Batiment:
+      required:
+        - cost
+        - type
+        - description
+        - id
+        - merveille
+        - tempsConstruction
+        - coutParTour
+        - coutConstruction
+        - contructibleSur
+        - estUneMerveille
+        - effetPartTour
+      type: object
+      properties:
+        id:
+          description: Identifiant techique du batiment
+          type: string
+        description:
+          description: Information sur l'utilité du batiment
+          type: string
+        type:
+          $ref: '#/components/schemas/NomBatiment'
+          description: Type du batiment
+        tempsConstruction:
+          description: Temps (nombre d'action) nécessaire à la construction
+          type: integer
+        estUneMerveille:
+          description: 'Les merveilles sont uniques, et ne peuvent être construites que par une seule équipes.'
+          default: false
+          type: boolean
+        contructibleSur:
+          description: Listes des biomes sur lesquelles le batiment peux être construit
+          type: array
+          items:
+            type: string
+        coutParTour:
+          description: Coûts en ressource du batiment par tour
+          type: array
+          items:
+            $ref: '#/components/schemas/BatimentRessource'
+        coutConstruction:
+          description: Coûts en ressource du batiment à la construction
+          type: array
+          items:
+            $ref: '#/components/schemas/BatimentRessource'
+        bonusConstruction:
+          description: Bonus en ressource du batiment à la construction
+          type: array
+          items:
+            $ref: '#/components/schemas/BatimentRessource'
+        bonus:
+          description: 'Bonus apportées par le bâtiment, par tour, ou lors d''une action'
+          type: array
+          items:
+            $ref: '#/components/schemas/BatimentBonus'
+        supplement:
+          description: Informations supplémentaire ce qu'apporte le batiment
+          type: array
+          items:
+            type: string
+      example:
+        id: 1f02cc7e-3467-4b1e-9a0f-9715b0eb5453
+        description: Un atelier pour tailler la pierre plus efficacement
+        type: CARRIERE
+        tempsConstruction: 35
+        estUneMerveille: false
+        contructibleSur:
+          - PLAINE
+          - DESERT
+        coutParTour:
+          -
+            idRessource: c5540a59-10df-46ad-9285-6c9f23e94e82
+            ressource: ENERGIE
+            quantite: 1
+          -
+            idRessource: 87a26cbc-0bb3-4943-91af-a5a6cc68b173
+            ressource: POLLUTION
+            quantite: -1
+        coutConstruction:
+          -
+            idRessource: f895b88b-b936-4cc9-88b5-14665ebdd616
+            ressource: BOIS
+            quantite: 300
+          -
+            idRessource: 3fafdfaf-43e2-4635-855a-4a5535f651fe
+            ressource: PIERRE
+            quantite: 150
+          -
+            idRessource: 7eff4b73-40e6-4b20-92f5-f261f3efcd96
+            ressource: FER
+            quantite: 100
+          -
+            idRessource: 3594cacf-3a17-46b6-b20d-d2d1737f3541
+            ressource: NOURRITURE
+            quantite: 100
+        bonusConstruction:
+          -
+            idRessource: f270cf43-0526-46e2-9599-8155325e5691
+            ressource: POINT
+            quantite: 400
+        bonus:
+          -
+            idRessource: 3fafdfaf-43e2-4635-855a-4a5535f651fe
+            ressource: PIERRE
+            quantite: 1
+            cibleBonus: EQUIPE
+            declenchement:
+              declencheur: RECOLTE
+              descriptionDeclencheur: Action d'un villageois sur la case
+          -
+            idRessource: 3fafdfaf-43e2-4635-855a-4a5535f651fe
+            ressource: PIERRE
+            quantite: 3
+            cibleBonus: EQUIPE
+            declenchement:
+              declencheur: AUTO
+              descriptionDeclencheur: A chaque tour du jeu
+    Equipe:
+      title: Root Type for Equipe
+      description: ''
+      required:
+        - type
+        - nom
+        - idEquipe
+        - villageois
+      type: object
+      properties:
+        idEquipe:
+          description: Identifiant technique de l'équipe
+          type: string
+        nom:
+          description: Le super nom de l'équipe
+          type: string
+        type:
+          description: Type de l'équipe
+          enum:
+            - ETU
+            - PRO
+            - ALL
+            - ADMIN
+        villageois:
+          description: >-
+            Listes des villageois de l'équipe. N'est récupérée que si vous êtes propriétaire de
+            l'équipe.
+          type: array
+          items:
+            $ref: '#/components/schemas/Villageois'
+        ressources:
+          description: La liste des ressources possédées par l'équipe
+          type: array
+          items:
+            $ref: '#/components/schemas/EquipeRessource'
+      example:
+        idEquipe: 63b0c0ff-a1c9-4c61-a0f9-392524e24c7e
+        nom: Les supers patates
+        type: PRO
+        villageois:
+          -
+            idVillageois: 51c7e1d5-e179-44b8-be44-a491092c1fa9
+            nom: El Paquito
+            dateDerniereAction: some text
+            disponible: true
+            type:
+              nom: PEON
+              description: 'Un villageois de base, sans aucune particularité'
+              mutliplicateurDeCooldown: '1'
+          -
+            idVillageois: 1e9038c7-db24-4a8c-9da8-b15b10651cd6
+            nom: El Niño
+            dateDerniereAction: some text
+            disponible: true
+            type:
+              nom: PEON
+              description: 'Un villageois de base, sans aucune particularité'
+              mutliplicateurDeCooldown: '1'
+    Villageois:
+      description: ''
+      required:
+        - type
+        - nom
+        - idVillageois
+        - disponible
+        - dateDerniereAction
+      type: object
+      properties:
+        idVillageois:
+          description: Identifiant technique du villageois
+          type: string
+        nom:
+          description: Nom du villageois.
+          type: string
+        dateDerniereAction:
+          description: Date de la dernière action du villageois
+          type: string
+        disponible:
+          description: Indique si le villageois peut réaliser une action
+          type: boolean
+        type:
+          $ref: '#/components/schemas/TypeVillageois'
+          description: Type du villageois
+        positionX:
+          description: Position X du villagois
+          type: integer
+        positionY:
+          description: Position Y du villagois
+          type: integer
+    Action:
+      description: Information sur une action
+      required:
+        - idAction
+        - nom
+        - cooldown
+        - type
+      type: object
+      properties:
+        idAction:
+          description: Identifiant technique de l'action
+          type: string
+        nom:
+          $ref: '#/components/schemas/NomAction'
+          description: Nom de l'action
+        cooldown:
+          format: double
+          description: Temps de recharge en seconde du villageois après réalisation de l'action
+          type: number
+        type:
+          $ref: '#/components/schemas/TypeAction'
+          description: Type de l'action
+        details:
+          description: 'Détail de l''action, dépend du type d''action'
+          type: object
+          properties:
+            quantite_recolte:
+              description: 'Pour les actions de type récolte (HARVEST), la quatité qui sera récoltée.'
+              type: string
+      example:
+        idAction: d8cba86a-bd92-46df-aadd-90a55dc00b4f
+        nom: DEPLACEMENT_GAUCHE
+        cooldown: 10
+        type: DEPLACEMENT
+    ErreurAPI:
+      title: Root Type for Erreur
+      description: Information concernant les erreurs d'API
+      required:
+        - code
+        - message
+        - timestamp
+      type: object
+      properties:
+        code:
+          description: >
+            Code erreur, sur deux chiffres. Indique des informations supplémentaire en plus du
+            code retour HTTP.  
+            
+            * 1X - Erreur d'accès (droit)
+            
+            * 2X - Erreur de requête, paramètres invalides
+            
+            * 3X -- 8X - Erreur lié au jeu
+            
+            * 9X - Autre erreur, non prévu (bug chez nous :))
+          type: string
+        message:
+          description: Message détaillant l'erreur survenue
+          type: string
+        timestamp:
+          format: date-time
+          description: Date à laquelle l'erreur est survenue
+          type: string
+      example:
+        code: '10'
+        message: Vous n'avez pas les accès à cette ressource
+        timestamp: '2025-02-01T14:41:36'
+    ReponseAPI:
+      title: Root Type for ReponseAPI
+      description: Réponse générique des API
+      required:
+        - message
+      type: object
+      properties:
+        message:
+          description: Message de retour générique des APIs
+          type: string
+        informationComplementaire:
+          type: string
+      example:
+        message: L'action à bien été prise en compte
+        informationComplementaire: Prochaine possible pour ce villageois dans 12 secondes
+    Ressource:
+      description: Les ressources récoltables et produites par les équipes/villageois/batiments
+      required:
+        - idRessource
+        - description
+        - nom
+        - type
+      type: object
+      properties:
+        idRessource:
+          description: Identifiant technique de la ressource
+          type: string
+        description:
+          description: Description de la ressource
+          type: string
+        nom:
+          $ref: '#/components/schemas/NomRessource'
+          description: Nom de la ressource
+        type:
+          $ref: '#/components/schemas/TypeRessource'
+          description: Type de la ressource
+      example:
+        idRessource: d8036eae-ea58-48a1-ad50-1d7aa743abda
+        description: De la pierre
+        nom: PIERRE
+        type: RECOLTABLE
+    NomRessource:
+      description: Les types de ressouces qui existes
+      enum:
+        - BOIS
+        - PIERRE
+        - FER
+        - CHARBON
+        - NOURRITURE
+        - ENERGIE
+        - POINT
+        - POLLUTION
+      type: string
+    TypeRessource:
+      description: Type de la ressource
+      enum:
+        - RECOLTABLE
+        - PRODUITE
+      type: string
+    DemandeAction:
+      description: ''
+      required:
+        - action
+      type: object
+      properties:
+        action:
+          $ref: '#/components/schemas/NomAction'
+          description: Action à réaliser
+        reference:
+          description: 'Pour les actions de récolte/contruction, la ressource/batiment à construire'
+          type: string
+      example:
+        action: START_BUILD
+        reference: CARRIERE
+    NomBatiment:
+      description: Type du batiment
+      enum:
+        - CABANE_DE_BUCHERON
+        - SCIERIE
+        - ATELIER_DE_TAILLE_DE_PIERRE
+        - CARRIERE
+        - EXCAVATRICE_A_FER
+        - MINE_DE_FER
+        - ATELIER_DE_CHARBONNIER
+        - MINE_DE_CHARBON
+        - MOULIN
+        - FERME
+        - PORT
+        - EOLIENNE
+        - CENTRALE_ELECTRIQUE_AU_CHARBON
+        - CENTRALE_AU_METHANE
+        - CENTRALE_A_BIOMASSE
+        - TURBINE_HYDRAULIQUE
+        - INSTALLATION_FORESTIERE
+        - USINE_DE_RENOUVELLEMENT
+        - PUITS_DE_CARBONE
+        - TOUR_DE_GUET
+        - OBSERVATOIRE
+        - MARCHE
+        - MUSEE
+        - BIBLIOTHEQUE
+        - THEATRE
+        - GRANDE_STATUE
+        - CAPITOLE
+        - BATEAU_DE_CROISIERE
+        - GRANDE_BIBLIOTHEQUE
+        - CHATEAU
+        - REACTEUR_A_FUSION_NUCLEAIRE
+      type: string
+    NomAction:
+      description: Nom de l'action
+      enum:
+        - DEPLACEMENT_DROITE
+        - DEPLACEMENT_GAUCHE
+        - DEPLACEMENT_HAUT
+        - DEPLACEMENT_BAS
+        - RECOLTER
+        - COMMENCER_CONSTRUCTION
+        - CONSTRUIRE
+        - RECYCLER_BATIMENT
+      type: string
+    TypeAction:
+      description: Type de l'action
+      enum:
+        - DEPLACEMENT
+        - RECOLTE
+        - CONSTRUCTION
+      type: string
+    TypeVillageois:
+      title: Root Type for TypeVillageois
+      description: Type de villageois. Contient les caractéristiques de ce dernier.
+      required:
+        - description
+        - mutliplicateurDeCooldown
+        - nom
+      type: object
+      properties:
+        nom:
+          description: Nom du type
+          enum:
+            - PEON
+            - PEON_MALADE
+          type: string
+        description:
+          description: Description du type de villageois
+          type: string
+        mutliplicateurDeCooldown:
+          format: double
+          description: >-
+            Multiplication du cooldown des actions.  
+            
+            Une valeur positive indique que le villageois est plus lent pour réaliser des actions,
+            tandis qu'une valeur négative indique qu'il est plus rapide.
+          type: number
+      example:
+        nom: PEON
+        description: 'Un villageois de base, sans aucune particularité'
+        mutliplicateurDeCooldown: '1'
+    Case:
+      title: Root Type for Case
+      description: Une case de la map
+      required:
+        - accessible
+        - coord_x
+        - coord_y
+        - identifiant
+        - proprietaire
+        - biome
+        - terrain
+        - ressources
+      type: object
+      properties:
+        coord_x:
+          description: Position horizontale de la case
+          type: integer
+        coord_y:
+          description: Position vertical de la case
+          type: integer
+        biome:
+          $ref: '#/components/schemas/Biome'
+          description: Information concernant le biome de le case
+        terrain:
+          $ref: '#/components/schemas/Terrain'
+          description: Information concernant le terrai de le case
+        batiment_construit:
+          $ref: '#/components/schemas/CaseBatiment'
+          description: Le batiment actuellement présent sur la case
+        accessible:
+          description: Un indicateur qui indique si case est accessible (construction)
+          type: boolean
+        proprietaire:
+          $ref: '#/components/schemas/Equipe'
+          description: L'équipe propriétaire de la case
+        ressources:
+          type: array
+          items:
+            $ref: '#/components/schemas/CaseRessources'
+          description: Ressources présente sur la case
+      example:
+        identifiant: 5
+        coord_x: 7
+        coord_y: 40
+        biome:
+          identifiant: eabeff13-2610-4f91-8f3e-e117e5d869e8
+          nom: Plaine
+          description: 'Une plaine, basique'
+          batimentsContructible:
+            - 1f02cc7e-3467-4b1e-9a0f-9715b0eb5453
+        terrain:
+          identifiant: afee1ea2-f3a9-4db7-8746-14ac159de6ff
+          nom: Rochers
+          description: 'Des rochers, beaucoup de rochers. Y''a même Yves'
+          ressourcesPresente:
+            -
+              ressource:
+                idRessource: d8036eae-ea58-48a1-ad50-1d7aa743abda
+                description: De la pierre
+                nom: PIERRE
+                type: RECOLTABLE
+              quantite: 5000
+        batiment_construit:
+          identifiant: 596d2e27-af72-4be4-9969-7789cd65d540
+          progression: 0
+          proprietaire:
+            idEquipe: 63b0c0ff-a1c9-4c61-a0f9-392524e24c7e
+            nom: Les supers patates
+            type: PRO
+          detailBatiment:
+            id: 1f02cc7e-3467-4b1e-9a0f-9715b0eb5453
+            description: Un atelier pour tailler la pierre plus efficacement
+            type: CARRIERE
+            tempsConstruction: 35
+            estUneMerveille: false
+            contructibleSur:
+              - PLAINE
+              - DESERT
+            coutParTour:
+              -
+                idRessource: c5540a59-10df-46ad-9285-6c9f23e94e82
+                ressource: ENERGIE
+                quantite: 1
+              -
+                idRessource: 87a26cbc-0bb3-4943-91af-a5a6cc68b173
+                ressource: POLLUTION
+                quantite: -1
+            coutConstruction:
+              -
+                idRessource: f895b88b-b936-4cc9-88b5-14665ebdd616
+                ressource: BOIS
+                quantite: 300
+              -
+                idRessource: 3fafdfaf-43e2-4635-855a-4a5535f651fe
+                ressource: PIERRE
+                quantite: 150
+              -
+                idRessource: 7eff4b73-40e6-4b20-92f5-f261f3efcd96
+                ressource: FER
+                quantite: 100
+              -
+                idRessource: 3594cacf-3a17-46b6-b20d-d2d1737f3541
+                ressource: NOURRITURE
+                quantite: 100
+            bonusConstruction:
+              -
+                idRessource: f270cf43-0526-46e2-9599-8155325e5691
+                ressource: POINT
+                quantite: 400
+            bonus:
+              -
+                idRessource: 3fafdfaf-43e2-4635-855a-4a5535f651fe
+                ressource: PIERRE
+                quantite: 1
+                cibleBonus: EQUIPE
+                declenchement:
+                  declencheur: RECOLTE
+                  descriptionDeclencheur: Action d'un villageois sur la case
+              -
+                idRessource: 3fafdfaf-43e2-4635-855a-4a5535f651fe
+                ressource: PIERRE
+                quantite: 3
+                cibleBonus: EQUIPE
+                declenchement:
+                  declencheur: AUTO
+                  descriptionDeclencheur: A chaque tour du jeu
+        accessible: true
+        proprietaire:
+          idEquipe: 63b0c0ff-a1c9-4c61-a0f9-392524e24c7e
+          nom: Les supers patates
+          type: PRO
+        ressources:
+          quantite: 54
+          ressource:
+            idRessource: d8036eae-ea58-48a1-ad50-1d7aa743abda
+            description: De la pierre
+            nom: PIERRE
+            type: RECOLTABLE
+    Biome:
+      title: Root Type for Biome
+      description: Détail d'un biome
+      required:
+        - batimentsContructible
+        - description
+        - identifiant
+        - nom
+      type: object
+      properties:
+        identifiant:
+          description: Identifiant technique du biome
+          type: string
+        nom:
+          description: Le nom du biome
+          type: string
+        description:
+          description: Description du biome
+          type: string
+        batimentsContructible:
+          description: La liste des batiments qu'il est possible de construire sur ce biome
+          type: array
+          items:
+            type: string
+      example:
+        identifiant: eabeff13-2610-4f91-8f3e-e117e5d869e8
+        nom: Plaine
+        description: 'Une plaine, basique'
+        batimentsContructible:
+          - 1f02cc7e-3467-4b1e-9a0f-9715b0eb5453
+    TerrainRessource:
+      title: Root Type for TerrainRessource
+      description: Information d'une ressource lié à un terrai
+      required:
+        - ressource
+        - quantite
+      type: object
+      properties:
+        ressource:
+          $ref: '#/components/schemas/Ressource'
+          description: Information sur la ressource
+        quantite:
+          description: quantite initialement présente de la ressource
+          type: integer
+      example:
+        ressource:
+          idRessource: d8036eae-ea58-48a1-ad50-1d7aa743abda
+          description: De la pierre
+          nom: PIERRE
+          type: RECOLTABLE
+        quantite: 5000
+    EquipeRessource:
+      title: Root Type for EquipeRessource
+      description: Information d'une ressource lié à une équipe
+      required:
+        - ressource
+        - quantite
+      type: object
+      properties:
+        ressource:
+          $ref: '#/components/schemas/Ressource'
+          description: Information sur la ressource
+        quantite:
+          description: quantite possédée de la ressource par l'équipe
+          type: integer
+      example:
+        ressource:
+          idRessource: d8036eae-ea58-48a1-ad50-1d7aa743abda
+          description: De la pierre
+          nom: PIERRE
+          type: RECOLTABLE
+        quantite: 5000
+    Terrain:
+      title: Root Type for Terrain
+      description: Détail sur un terrai
+      required:
+        - ressourcesPresente
+        - nom
+        - identifiant
+        - description
+      type: object
+      properties:
+        identifiant:
+          description: Identifiant technique du terrai
+          type: string
+        nom:
+          description: Nom du terrain
+          type: string
+        description:
+          description: Description du terrain
+          type: string
+        ressourcesPresente:
+          description: La liste des ressources présente sur la case initialement
+          type: array
+          items:
+            $ref: '#/components/schemas/TerrainRessource'
+      example:
+        identifiant: afee1ea2-f3a9-4db7-8746-14ac159de6ff
+        nom: Rochers
+        description: 'Des rochers, beaucoup de rochers. Y''a même Yves'
+        ressourcesPresente:
+          -
+            ressource:
+              idRessource: d8036eae-ea58-48a1-ad50-1d7aa743abda
+              description: De la pierre
+              nom: PIERRE
+              type: RECOLTABLE
+            quantite: 5000
+    CaseRessources:
+      description: Information d'une ressource par rapport à une case
+      required:
+        - case
+        - ressource
+        - quantite
+      type: object
+      properties:
+        quantite:
+          description: quantite de ressource présente
+          type: integer
+        ressource:
+          $ref: '#/components/schemas/Ressource'
+          description: Information sur la ressource
+    CaseBatiment:
+      description: Information sur un batiment par rapport à une case
+      required:
+        - progression
+        - identifiant
+        - proprietaire
+        - detailBatiment
+      type: object
+      properties:
+        progression:
+          description: Nombre d'action de contruction restante avant la fin de la construction
+          type: integer
+        identifiant:
+          description: Identifiant du batiment sur la case
+          type: string
+        proprietaire:
+          $ref: '#/components/schemas/Equipe'
+          description: Equipe qui possède le batiment
+        detailBatiment:
+          $ref: '#/components/schemas/Batiment'
+          description: Information sur le batiment
+    ReponseAction:
+      description: Reponse envoyé lors d'une action
+      type: object
+      properties:
+        ressource:
+          description: Ressource obtenu
+          type: integer
+  responses:
+    ErreurRessourceNonTrouve:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErreurAPI'
+          examples:
+            Erreur:
+              value:
+                code: '24'
+                message: La ressource demandée n'existe pas
+                timestamp: '2018-02-10T09:30:20Z'
+      description: Erreur en cas d'appel à une ressource qui n'existe pas
+    ErreurAccesNonAuthentifie:
+      content:
+        application/json:
+          examples:
+            Accès non authentifié:
+              value:
+                code: '19'
+                message: Vous n'êtes pas authentifié
+                timestamp: '2025-02-01T14:41:36'
+      description: Erreur générique en cas d'accès non authentifié à une API
+    ErreurAccesDroit:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErreurAPI'
+          examples:
+            ErreurAccesDroit:
+              value:
+                code: '10'
+                message: Vous n'avez pas les accès à cette ressource
+                timestamp: '2025-02-01T14:41:36'
+      description: Erreur en cas de manque de droits lors de l'accès à une ressource
+tags:
+  -
+    name: Equipes
+    description: Opérations sur les équipes
+  -
+    name: Monde
+    description: Opérations sur le monde
+  -
+    name: Batiments
+    description: Opérations liées aux batiments et constructions
+  -
+    name: Villageois
+    description: Opérations sur les villageois
+  -
+    name: Ressources
+    description: Opérations sur les ressources
