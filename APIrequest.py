@@ -16,7 +16,7 @@ headers = {
 }
 
 # Effectuer la requête POST avec des en-têtes
-response = requests.get(url, json=data, headers=headers)
+response = requests.post(url, json=data, headers=headers)
 
 # Vérifier le statut de la réponse
 if response.status_code == 200:
