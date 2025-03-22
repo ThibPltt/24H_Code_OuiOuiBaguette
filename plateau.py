@@ -13,7 +13,7 @@ GRAY = (200, 200, 200)  # Gris pour les bordures
 
 # Initialisation de Pygame
 pygame.init()
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
+screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
 pygame.display.set_caption("Plateau avec images")
 
 # Charger les images avec transparence
