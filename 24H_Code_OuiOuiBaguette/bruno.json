@@ -1,0 +1,15 @@
+{
+  "version": "1",
+  "name": "24H_Code_OuiOuiBaguette",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "size": 0,
+  "filesCount": 0,
+  "presets": {
+    "requestType": "http",
+    "requestUrl": "'http://51.210.117.22:8081/realms/codelemans/protocol/openidconnect/token"
+  }
+}
