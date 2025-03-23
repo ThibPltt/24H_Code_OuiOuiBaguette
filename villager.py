@@ -1,6 +1,7 @@
 import requests
 import pygame
-import plateau  # Importation du fichier plateau.py
+import plateau  # Import the grid system
+from ressources import ResourceManager  # Import the resource manager
 
 # API Info
 idEquipe = "8503fb81-528b-4b2d-8b1f-783bcc8bf6db"
@@ -15,40 +16,57 @@ headers = {
 villager_img = pygame.image.load("assets2D/villagers/villager.png").convert_alpha()
 villager_scaled = pygame.transform.scale(villager_img, (plateau.CELL_SIZE, plateau.CELL_SIZE))
 
-# Villager list (will be updated via API)
-villagers = []
+class VillagerManager:
+    def __init__(self):
+        self.villagers = []
+        self.resources = ResourceManager()  # Create resource manager instance
+        self.fetch_villagers()
 
-def fetch_villagers():
-    """Fetch all villagers' positions from the API and update their locations."""
-    global villagers
-    response = requests.get(base_url, headers=headers)
-    
-    if response.status_code == 200:
-        data = response.json()  # Assuming API returns a list of villagers
-        villagers = [
-            {"id": v["idVillageois"], "name": v["nom"], "position": (v["positionX"], v["positionY"])}
-            for v in data
-        ]
-    else:
-        print(f"❌ Error fetching villagers: {response.status_code} - {response.text}")
+    def fetch_villagers(self):
+        """Fetch all villagers' positions from the API."""
+        response = requests.get(base_url, headers=headers)
+        if response.status_code == 200:
+            data = response.json()
+            self.villagers = [
+                {
+                    "id": v["idVillageois"],
+                    "name": v["nom"],
+                    "position": (v["positionX"], v["positionY"]),
+                }
+                for v in data
+            ]
+            print("✅ Villagers updated:", self.villagers)
+        else:
+            print(f"❌ Error fetching villagers: {response.status_code} - {response.text}")
 
-def draw_villagers():
-    """Draw villagers at their correct positions."""
-    for villager in villagers:
-        x, y = villager["position"]
-        x_pixel, y_pixel = x * plateau.CELL_SIZE, y * plateau.CELL_SIZE
-        plateau.screen.blit(villager_scaled, (x_pixel, y_pixel))
+    def draw_villagers(self):
+        """Draw villagers at their positions."""
+        for villager in self.villagers:
+            x, y = villager["position"]
+            plateau.screen.blit(villager_scaled, (x * plateau.CELL_SIZE, y * plateau.CELL_SIZE))
 
-def handle_keys():
-    """Press 'R' to refresh villager positions manually."""
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_r]:  # Refresh positions
-        fetch_villagers()
+    def draw_coordinates(self):
+        """Display villagers' positions and total resources in the top-right."""
+        font = pygame.font.SysFont("Arial", 18)
+        color_black = (0, 0, 0)
+        y_offset = 150
 
-def draw_coordinates():
-    """Display coordinates of villagers on the screen."""
-    font = pygame.font.SysFont("Arial", 18)
-    for villager in villagers:
-        x, y = villager["position"]
-        coord_text = font.render(f"Coord: ({x}, {y})", True, (255, 255, 255))
-        plateau.screen.blit(coord_text, (10, plateau.HEIGHT - 30))
+        # 🎯 Display Villager Positions
+        for villager in self.villagers:
+            x, y = villager["position"]
+            coord_text = font.render(f"{villager['name']}: ({x}, {y})", True, color_black)
+            plateau.screen.blit(coord_text, (plateau.WIDTH - 250, y_offset))
+            y_offset += 20  # Move down for next villager
+
+        # 📢 Space between villagers and resources
+        y_offset += 20
+        resource_text = font.render("💰 Ressources:", True, color_black)
+        plateau.screen.blit(resource_text, (plateau.WIDTH - 250, y_offset))
+        y_offset += 20
+
+        # 💰 Display Total Resources
+        total_resources = self.resources.fetch_total_resources()  # Get summed resources
+        for resource, qty in total_resources.items():
+            resource_info = font.render(f"{resource}: {qty}", True, color_black)
+            plateau.screen.blit(resource_info, (plateau.WIDTH - 250, y_offset))
+            y_offset += 20  # Move down for next resource
