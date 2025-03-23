@@ -7,9 +7,11 @@ CELL_SIZE = 20  # Taille d'une case en pixels
 WIDTH = GRID_SIZE * CELL_SIZE
 HEIGHT = GRID_SIZE * CELL_SIZE
 
+
 # Couleurs
 GREEN = (231, 245, 221)  # Vert foncé pour le fond
 GRAY = (200, 200, 200)  # Gris pour les bordures
+BLACK = (0, 0, 0)
 
 # Initialisation de Pygame
 pygame.init()
